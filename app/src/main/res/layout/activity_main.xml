@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="myequation"
+            type="com.example.quadratucequationsolver.MyEquation" />
+    </data>
+<LinearLayout
+    android:background="@drawable/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <EditText
+        android:text="@={myequation.a}"
+        android:id="@+id/editText1"
+        android:layout_width="match_parent"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:hint="Enter A"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+    </EditText>
+    <EditText
+        android:text="@={myequation.b}"
+        android:id="@+id/editText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:hint="Enter B"
+        android:layout_marginTop="20dp">
+    </EditText>
+    <EditText
+        android:text="@={myequation.c}"
+        android:id="@+id/editText3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:hint="Enter C"
+        android:layout_marginTop="20dp">
+    </EditText>
+
+    <Button
+        android:onClick="@{myequation::SolveEquation}"
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Solve!">
+    </Button>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Solution"
+        android:textSize="32sp"
+        android:id="@+id/textView">
+    </TextView>
+</LinearLayout>
+</layout>
